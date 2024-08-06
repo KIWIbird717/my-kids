@@ -8,9 +8,9 @@ export default getRequestConfig(async ({ locale }) => {
   // Валидируем, что входящий параметр `locale` является допустимым
   if (!locales.includes(locale as any)) notFound();
 
-  const localizationJson = await import(`@/public/localization/${locale}.json`);
+  const localizationJson = (await import(`@/public/localization/${locale}.json`)).default;
 
   return {
-    messages: localizationJson.data,
+    messages: localizationJson,
   };
 });
