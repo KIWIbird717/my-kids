@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/public/styles/globals.scss"
+import "@/public/styles/globals.scss";
 import Script from "next/script";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
