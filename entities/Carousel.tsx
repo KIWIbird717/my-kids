@@ -1,22 +1,24 @@
 import BackBtn from "@/shared/ui/BackBtn";
 import MoonLogo from "@/shared/ui/MoonLogo";
-import NextBtn from "@/shared/ui/swiper/SwiperNextBtn";
 import React from "react";
 import BgHeart from "../public/bgUnion.svg";
 import Image from "next/image";
 import pregPhoto from "../public/pregn1.png";
 import Cross from "../public/cross.svg";
 import SwiperPage from "@/widgets/SwiperPage";
+import Link from "next/link";
+import { useLocale } from "next-intl";
 
 export default function Carousel() {
+  const locale = useLocale()
   return (
     <div className="relative flex w-full flex-col items-center">
       <div className="mt-[4rem]">
         <MoonLogo />
       </div>
-      <div className="absolute right-0 mr-[41px] mt-[4.25rem]">
+      <Link href={`/${locale}/plan`} className="absolute right-0 mr-[41px] mt-[4.25rem]">
         <Cross />
-      </div>
+      </Link>
       <div className="absolute mr-[3.95rem]">
         <BgHeart />
       </div>

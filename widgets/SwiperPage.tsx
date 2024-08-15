@@ -11,6 +11,7 @@ import pregn2 from "../public/pregn2.png";
 import pregn3 from "../public/pregn3.png";
 import { SwiperNextBtn } from "@/shared/ui/swiper/SwiperNextBtn";
 import { useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
 
 const pagination = {
   clickable: true,
@@ -20,8 +21,9 @@ const pagination = {
 };
 
 export default function SwiperPage() {
+  const locale = useLocale();
   const router = useRouter();
-  const nextPageLink = "";
+  const nextPageLink = `/${locale}/plan`;
 
   const handleNextPageNavigation = () => {
     router.push(nextPageLink);
