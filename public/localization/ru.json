@@ -50,6 +50,9 @@
     "Plan": {
       "NextBtn": "Начать расчёт"
     },
+    "SwiperPage": {
+      "NextBtn": "Дальше"
+    },
     "StartBtn": {
       "text": "Начать"
     },

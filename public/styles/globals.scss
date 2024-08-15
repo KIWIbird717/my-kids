@@ -35,3 +35,35 @@
     rgba(143, 65, 238, 0) 60%
   );
 }
+
+.swiper-pagination {
+  top: 0 !important;
+  left: 0 !important;
+  margin-top: 640.7px;
+  width: 62px !important;
+  margin-left: 30px !important;
+}
+
+.swiper-slide {
+  opacity: 0 !important;
+  transition: 0.3s !important;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+  transition: 0.3s !important;
+}
+
+.swiper-pagination-bullet {
+  width: 4px !important;
+  height: 4px !important;
+  background-color: #ffffff !important;
+  opacity: 0.6 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  width: 26px !important;
+  border-radius: 20px !important;
+  transition: 0.3s !important;
+}
