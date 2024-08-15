@@ -14,18 +14,27 @@
 
 .startBg {
   background-image: url("../bgimage.jpg");
+  background-size: cover;
+}
+
+body {
+  background-image: url("../bgimage.jpg");
+  background-size: cover;
 }
 
 .introBg {
   background-image: url("../introbg.jpg");
+  background-size: cover;
 }
 
 .tipsBg {
   background-image: url("../tipsbg.jpg");
+  background-size: cover;
 }
 
 .planBg {
   background-image: url("../planbg.jpg");
+  background-size: cover;
 }
 
 .btnGrad {
