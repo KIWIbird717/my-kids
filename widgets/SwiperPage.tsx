@@ -2,26 +2,31 @@
 
 import React from "react";
 import { EffectFade, Pagination } from "swiper/modules";
-
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-
-import NextArrow from "../public/NextArrow.svg";
-
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
 import pregn1 from "../public/pregn1.png";
 import pregn2 from "../public/pregn2.png";
 import pregn3 from "../public/pregn3.png";
-import SwiperNextBtn from "@/shared/ui/swiper/SwiperNextBtn";
+import { SwiperNextBtn } from "@/shared/ui/swiper/SwiperNextBtn";
+import { useRouter } from "next/navigation";
+
+const pagination = {
+  clickable: true,
+  renderBullet: function (_: number, className: string) {
+    return '<span class="' + className + '"></span>';
+  },
+};
 
 export default function SwiperPage() {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index: number, className: string) {
-      return '<span class="' + className + '"></span>';
-    },
+  const router = useRouter();
+  const nextPageLink = "";
+
+  const handleNextPageNavigation = () => {
+    router.push(nextPageLink);
   };
+
   return (
     <div className="">
       <Swiper
@@ -61,7 +66,7 @@ export default function SwiperPage() {
             3. Готовится к родам с чеклистами на каждый триместр
           </p>
         </SwiperSlide>
-        <SwiperNextBtn />
+        <SwiperNextBtn onLastSlide={handleNextPageNavigation} />
       </Swiper>
     </div>
   );

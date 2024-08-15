@@ -1,16 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import NextArrow from "../../../public/NextArrow.svg";
-import { useSwiper } from "swiper/react";
+import { SwiperClass, useSwiper } from "swiper/react";
 import { useTranslations } from "next-intl";
+import Swiper from "swiper";
 
-export default function SwiperNextBtn() {
+type SwiperNextBtnProps = {
+  onLastSlide?: (currentSlide: ReturnType<typeof useSwiper>["activeIndex"]) => void;
+};
+export const SwiperNextBtn: FC<SwiperNextBtnProps> = (props) => {
   const swiper = useSwiper();
   const t = useTranslations("UI.SwiperPage");
+
+  const handleNextSlide = () => {
+    if (swiper.activeIndex === swiper.slides.length - 1) {
+      props.onLastSlide && props.onLastSlide(swiper.activeIndex);
+    }
+    swiper.slideNext();
+  };
+
   return (
     <button
-      onClick={() => swiper.slideNext()}
+      onClick={handleNextSlide}
       className="relative z-[999] ml-[183px] mt-[-95px] flex w-[11rem] items-center justify-start rounded-[1.25rem] border-[1.5px] border-solid border-btn py-[0.9375rem] text-[1.125rem] font-medium leading-[1.625rem] text-white"
     >
       <span className="ml-[12px] w-[123px]">{t("NextBtn")}</span>
@@ -19,4 +31,4 @@ export default function SwiperNextBtn() {
       </div>
     </button>
   );
-}
+};
