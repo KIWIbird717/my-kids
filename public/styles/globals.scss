@@ -8,6 +8,26 @@
   :root {
     // Primary palette
     --white: #ffffff;
-    --black: #000000
+    --black: #000000;
   }
+}
+
+.startBg {
+  background-image: url("../bgimage.jpg");
+}
+
+.introBg {
+  background-image: url("../introbg.jpg");
+}
+
+.tipsBg {
+  background-image: url("../tipsbg.jpg");
+}
+
+.btnGrad {
+  background-image: radial-gradient(
+    284.32% 169.61% at 27.12% -21.74%,
+    rgba(82, 182, 255, 0.6) 0%,
+    rgba(143, 65, 238, 0) 60%
+  );
 }
