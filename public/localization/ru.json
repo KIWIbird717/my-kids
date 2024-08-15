@@ -47,6 +47,9 @@
     "Tips": {
       "NextBtn": "Продолжить"
     },
+    "Plan": {
+      "NextBtn": "Начать расчёт"
+    },
     "StartBtn": {
       "text": "Начать"
     },
