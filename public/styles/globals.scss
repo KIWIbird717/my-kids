@@ -76,3 +76,42 @@ body {
   border-radius: 20px !important;
   transition: 0.3s !important;
 }
+
+.inputToggle:checked + .toggleSpan::before {
+  left: 50%;
+}
+
+.toggleSpan {
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 14px;
+    left: 5px;
+    background: #4d28b8;
+    background-image: radial-gradient(
+      284.32% 169.61% at 27.12% -21.74%,
+      rgba(82, 182, 255, 0.6) 0%,
+      rgba(143, 65, 238, 0) 60%
+    );
+    width: 166px;
+    height: 49px;
+    transition: all 0.3s;
+  }
+}
+
+.inputToggle:checked + .toggleSpan span:first-child {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.inputToggle:checked + .toggleSpan span:last-child {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.inputToggle + .toggleSpan span:first-child {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.inputToggle + .toggleSpan span:last-child {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}

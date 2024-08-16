@@ -1,17 +1,16 @@
 "use client";
 
-import React from "react";
-import { EffectFade, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperNextBtn } from "@/shared/ui/swiper/SwiperNextBtn";
+import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import "swiper/css";
 import "swiper/css/pagination";
-import Image from "next/image";
+import { EffectFade, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import pregn1 from "../public/pregn1.png";
 import pregn2 from "../public/pregn2.png";
 import pregn3 from "../public/pregn3.png";
-import { SwiperNextBtn } from "@/shared/ui/swiper/SwiperNextBtn";
-import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
 
 const pagination = {
   clickable: true,
@@ -23,6 +22,7 @@ const pagination = {
 export default function SwiperPage() {
   const locale = useLocale();
   const router = useRouter();
+  const t = useTranslations("widgets.PhotoSwiper");
   const nextPageLink = `/${locale}/plan`;
 
   const handleNextPageNavigation = () => {
@@ -45,7 +45,7 @@ export default function SwiperPage() {
             className="ml-[24px] mt-[77.7px] h-[240px] w-[240px]"
           />
           <p className="ml-[21px] mt-[155px] h-[89px] w-[291px] text-[26px] leading-8 text-white">
-            1. Контролировать прибавку веса
+            {t("text1")}
           </p>
         </SwiperSlide>
         <SwiperSlide className="flex items-center justify-center">
@@ -55,7 +55,7 @@ export default function SwiperPage() {
             className="ml-[24px] mt-[77.7px] h-[240px] w-[240px]"
           />
           <p className="ml-[21px] mt-[155px] h-[89px] w-[332px] text-[26px] leading-8 text-white">
-            2. Следовать советам вашего врача по питанию и образу жизни
+            {t("text2")}
           </p>
         </SwiperSlide>
         <SwiperSlide className="flex items-center justify-center">
@@ -65,7 +65,7 @@ export default function SwiperPage() {
             className="ml-[24px] mt-[77.7px] h-[240px] w-[240px]"
           />
           <p className="ml-[21px] mt-[155px] h-[89px] w-[332px] text-[26px] leading-8 text-white">
-            3. Готовится к родам с чеклистами на каждый триместр
+            {t("text3")}
           </p>
         </SwiperSlide>
         <SwiperNextBtn onLastSlide={handleNextPageNavigation} />

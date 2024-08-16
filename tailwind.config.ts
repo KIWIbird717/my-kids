@@ -31,10 +31,13 @@ const config: Config = {
       boxShadow: {
         smallCircle:
           "inset 0px 20px 20px 0px rgba(255, 255, 255, 0.08), inset 0px -20px 20px 0px rgba(164, 179, 255, 0.1)",
+        toggleBtnShadow: "inset 0px 1px 0px 0px #4D28B8",
       },
       backgroundImage: {
         bgStart: "url('/public/bgimage.jpg')",
         bgIntro: "url('/public/introbg.jpg')",
+        toggleBtn:
+          "linear-gradient(167.57deg, rgba(46, 51, 90, 0.5) -4.68%, rgba(28, 27, 51, 0.5) 95.45%)",
         fullColorBtn: "linear-gradient(218.06deg, #7041EE -5.89%, #8D41EE 51.01%, #D641EE 101.92%)",
         bgGrad:
           "linear-gradient(168.96deg, #5A12B5 -3.14%, #00000000 31.53%, #00000000 69.66%, #4111FF 107.8%)",

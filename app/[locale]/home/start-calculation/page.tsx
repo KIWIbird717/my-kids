@@ -1,6 +1,7 @@
-import React, { FC } from "react";
+import BottomSvg from "@/public/bottomfigurine.svg";
 import PregnPng from "@/public/pregn1.png";
 import { cn } from "@/shared/lib/utils/cn";
+import { FC } from "react";
 
 export default function page() {
   return (
@@ -12,6 +13,9 @@ export default function page() {
       </div>
       <div className="flex-1 bg-red-400">
         <div className="h-[600px]">content2</div>
+      </div>
+      <div className="absolute bottom-0">
+        <BottomSvg />
       </div>
     </div>
   );
