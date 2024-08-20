@@ -1,18 +1,31 @@
 "use client";
 
-import { cn } from "@/shared/lib/utils/cn";
 import { HandleSwipe } from "@/shared/ui/HandleSwipe";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Sheet } from "react-modal-sheet";
 
-export const FinalPageModal = () => {
-  const [isOpen, setIsOpen] = useState(false);
+type FinalPageModalProps = {
+  isOpen?: boolean;
+  onModalOpen?: () => void;
+  onModalClose?: () => void;
+};
+
+export const FinalPageModal: FC<FinalPageModalProps> = (props) => {
+  const [isOpen, setIsOpen] = useState(props.isOpen || false);
+
+  useEffect(() => {
+    if (props.isOpen === undefined) return;
+    setIsOpen(props.isOpen);
+  }, [props.isOpen]);
+
+  const handleModalClose = () => {
+    setIsOpen(false);
+    props.onModalClose && props.onModalClose();
+  };
 
   return (
     <div className="w-full">
-      <HandleSwipe onSwipeUp={() => setIsOpen(true)} className="h-[60px]" />
-
-      <Sheet isOpen={isOpen} snapPoints={[0.64, 0]} onClose={() => setIsOpen(false)}>
+      <Sheet isOpen={isOpen} snapPoints={[0.64, 0]} onClose={handleModalClose}>
         <Sheet.Container className="!rounded-t-[44px] !bg-transparent bg-modalSheetBg pl-[32px] pr-[25px] backdrop-blur-[50px]">
           <Sheet.Content>
             <div className="relative mt-[7px] flex w-[319px] flex-col items-center">

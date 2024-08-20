@@ -1,8 +1,9 @@
-import { FC, useState } from "react";
+import { FC, ReactNode, useState } from "react";
 import { cn } from "../lib/utils/cn";
 
 type HandleSwipeUpProps = {
   className?: string;
+  children?: ReactNode;
   onSwipeUp?: () => void;
   onSwipeDown?: () => void;
 };
@@ -42,6 +43,8 @@ export const HandleSwipe: FC<HandleSwipeUpProps> = (props) => {
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
       className={cn(props.className, "w-full")}
-    />
+    >
+      {props.children}
+    </div>
   );
 };
