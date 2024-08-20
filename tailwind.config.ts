@@ -31,10 +31,14 @@ const config: Config = {
       boxShadow: {
         smallCircle:
           "inset 0px 20px 20px 0px rgba(255, 255, 255, 0.08), inset 0px -20px 20px 0px rgba(164, 179, 255, 0.1)",
+        toggleBtnShadow: "inset 0px 1px 0px 0px #2d296a",
+        lineShadow: " 0px 1px 0px 0px #00000033",
       },
       backgroundImage: {
         bgStart: "url('/public/bgimage.jpg')",
         bgIntro: "url('/public/introbg.jpg')",
+        toggleBtn:
+          "linear-gradient(167.57deg, rgba(46, 51, 90, 0.5) -4.68%, rgba(28, 27, 51, 0.5) 95.45%)",
         fullColorBtn: "linear-gradient(218.06deg, #7041EE -5.89%, #8D41EE 51.01%, #D641EE 101.92%)",
         bgGrad:
           "linear-gradient(168.96deg, #5A12B5 -3.14%, #00000000 31.53%, #00000000 69.66%, #4111FF 107.8%)",
@@ -42,6 +46,10 @@ const config: Config = {
           " linear-gradient(268.5deg, rgba(49, 1, 237, 0.06) -0.06%, rgba(59, 38, 123, 0.06) 97.65%)",
         radGrad:
           "radial-gradient(284.32% 169.61% at 27.12% -21.74%,rgba(82, 182, 255, 0.6) 0%, rgba(143, 65, 238, 0) 60%)",
+        statsSwiperBg:
+          "linear-gradient(167.57deg, rgba(46, 51, 90, 1) -4.68%, rgba(28, 27, 51, 1) 95.45%)",
+        modalSheetBg:
+          "linear-gradient(167.57deg, rgba(46, 51, 90, 0.26) -4.68%, rgba(28, 27, 51, 0.26) 95.45%)",
       },
     },
   },

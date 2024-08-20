@@ -1,10 +1,9 @@
 "use client";
 
-import React, { FC } from "react";
-import NextArrow from "../../../public/NextArrow.svg";
-import { SwiperClass, useSwiper } from "swiper/react";
 import { useTranslations } from "next-intl";
-import Swiper from "swiper";
+import { FC } from "react";
+import { useSwiper } from "swiper/react";
+import NextArrow from "../../../public/NextArrow.svg";
 
 type SwiperNextBtnProps = {
   onLastSlide?: (currentSlide: ReturnType<typeof useSwiper>["activeIndex"]) => void;
