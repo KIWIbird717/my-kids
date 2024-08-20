@@ -1,17 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import { cn } from "@/shared/lib/utils/cn";
+import { HandleSwipe } from "@/shared/ui/HandleSwipe";
+import React, { FC, useState } from "react";
 import { Sheet } from "react-modal-sheet";
 
 export const FinalPageModal = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div>
-      <button onClick={() => setIsOpen(true)} className="z-[999] h-[35px] w-full">
-        Проведите вверх, чтобы узнать подробности
-      </button>
+    <div className="w-full">
+      <HandleSwipe onSwipeUp={() => setIsOpen(true)} className="h-[60px]" />
+
       <Sheet isOpen={isOpen} snapPoints={[0.64, 0]} onClose={() => setIsOpen(false)}>
-        <Sheet.Container className="bg-modalSheetBg !rounded-t-[44px] !bg-transparent pl-[32px] pr-[25px] backdrop-blur-[50px]">
+        <Sheet.Container className="!rounded-t-[44px] !bg-transparent bg-modalSheetBg pl-[32px] pr-[25px] backdrop-blur-[50px]">
           <Sheet.Content>
             <div className="relative mt-[7px] flex w-[319px] flex-col items-center">
               <div className="h-[22px] w-[286px] rounded-[50%] bg-[#8427FB80] blur-[26px]"></div>
