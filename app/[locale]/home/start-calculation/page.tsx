@@ -22,7 +22,7 @@ export default function page() {
       <div className="flex-1 rounded-[44px] bg-[#1C1B33] shadow-toggleBtnShadow">
         <div className="relative">
           <Image src={swipeShadow} alt="shadow" className="absolute w-full" />
-          <div className="shadow-lineShadow absolute mt-[85px] h-[1px] w-full bg-[#252346]"></div>
+          <div className="absolute mt-[85px] h-[1px] w-full bg-[#252346] shadow-lineShadow"></div>
           <StatsSwiper />
           <div className="h-[102px] w-screen bg-[#1C1B33]"></div>
         </div>
