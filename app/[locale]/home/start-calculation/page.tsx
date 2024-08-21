@@ -14,7 +14,6 @@ export default function page() {
           <MoonLogo />
         </div>
         <Image src={ChildPhoto} className="h-full bg-contain" alt="pregn1" />
-        {/* <Pagination activePage={props.currentSlideIndex} /> */}
       </div>
       <div className="flex-1 rounded-[44px] bg-[#1C1B33] shadow-toggleBtnShadow">
         <div className="relative">
@@ -30,22 +29,3 @@ export default function page() {
     </div>
   );
 }
-
-// type PaginationProps = {
-//   activePage: number;
-// };
-// export const Pagination: FC<PaginationProps> = (props) => {
-//   return (
-//     <div className="flex gap-2">
-//       {Array.from({ length: 6 }).map((_, index) => (
-//         <div
-//           key={`pagination-${index}`}
-//           className={cn(
-//             "h-[5px] w-[5px] rounded-full bg-white",
-//             props.activePage === index && "w-[26px]",
-//           )}
-//         />
-//       ))}
-//     </div>
-//   );
-// };

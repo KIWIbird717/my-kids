@@ -1,6 +1,5 @@
 import HomeTitle from "@/entities/HomeTitle";
 import { cn } from "@/shared/lib/utils/cn";
-import React from "react";
 
 export default function page() {
   return (

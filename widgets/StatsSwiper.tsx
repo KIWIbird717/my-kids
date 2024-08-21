@@ -4,7 +4,7 @@ import FemaleSvg from "@/public/female.svg";
 import MaleSvg from "@/public/male.svg";
 import { cn } from "@/shared/lib/utils/cn";
 import { BackBtn } from "@/shared/ui/home/start-calculation/BackBtn";
-import { NextBtn, StatsNextBtnProps } from "@/shared/ui/home/start-calculation/NextBtn";
+import { NextBtn } from "@/shared/ui/home/start-calculation/NextBtn";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import "swiper/css";
