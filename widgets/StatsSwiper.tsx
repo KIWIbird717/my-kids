@@ -14,8 +14,6 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 import DateSelection from "./DateSelection";
 
-export type StatsSwiperProps = {} & Pick<StatsNextBtnProps, "currentSlideIndex">;
-
 const pagination = {
   clickable: true,
   renderBullet: function (_: number, className: string) {
@@ -23,7 +21,7 @@ const pagination = {
   },
 };
 
-export const StatsSwiper = (props: StatsSwiperProps) => {
+export const StatsSwiper = () => {
   const t = useTranslations("");
   const swiper = useSwiper();
 
@@ -209,12 +207,7 @@ export const StatsSwiper = (props: StatsSwiperProps) => {
       </SwiperSlide>
       <div className="z-[998] mb-[20px] mt-[31px] flex gap-[9px] px-[25px]">
         <BackBtn onLastSlide={isLastSlide} setIsLastSlide={setIsLastSlide} />
-        <NextBtn
-          currentSlideIndex={props.currentSlideIndex}
-          swiper={swiper}
-          onLastSlide={isLastSlide}
-          setIsLastSlide={setIsLastSlide}
-        />
+        <NextBtn swiper={swiper} onLastSlide={isLastSlide} setIsLastSlide={setIsLastSlide} />
       </div>
     </Swiper>
   );

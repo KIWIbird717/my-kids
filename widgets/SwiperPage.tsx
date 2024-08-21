@@ -37,6 +37,7 @@ export default function SwiperPage() {
         effect="fade"
         modules={[Pagination, EffectFade]}
         className="relative h-[720px] w-screen"
+        id="introSwiper"
       >
         <SwiperSlide className="relative flex items-center justify-center">
           <Image

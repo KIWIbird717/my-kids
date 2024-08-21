@@ -12,7 +12,6 @@ import type { Dispatch, SetStateAction } from "react";
 
 export type StatsNextBtnProps = {
   onLastSlide?: boolean;
-  currentSlideIndex: ReturnType<typeof useSwiper>["activeIndex"];
   setIsLastSlide: Dispatch<SetStateAction<boolean>>;
   swiper: Swiper;
 };
@@ -32,8 +31,6 @@ export const NextBtn: FC<StatsNextBtnProps> = (props) => {
     }
     swiper.slideNext();
   };
-
-  console.log(swiper.activeIndex);
 
   return (
     <>
