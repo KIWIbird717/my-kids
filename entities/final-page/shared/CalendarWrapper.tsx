@@ -19,7 +19,7 @@ export const CalendarWrapper: FC<CalendarWrapperProps> = (props) => {
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isCalendarShown ? 1 : 0, y: isCalendarShown ? 0 : 50 }}
-      className="w-full"
+      className="mt-[-20px] w-full"
     >
       <h3 className="ml-[30px] h-[29px] text-[16px] font-bold leading-[26px] text-white">
         Благоприятные дни зачатия
