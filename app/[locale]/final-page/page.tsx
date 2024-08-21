@@ -1,4 +1,5 @@
 import PageBoy from "@/entities/final-page/PageBoy";
+import PageGirl from "@/entities/final-page/PageGirl";
 import { BackButton } from "@/entities/final-page/shared/BackButton";
 import { cn } from "@/shared/lib/utils/cn";
 import MoonLogo from "@/shared/ui/MoonLogo";

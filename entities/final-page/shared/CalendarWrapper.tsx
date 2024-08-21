@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { FC, useEffect, useState } from "react";
 import { Calendar } from "./Calendar";
-import BackArrow from "@/public/BackArrow.svg";
 
 type CalendarWrapperProps = {
   isShown: boolean;

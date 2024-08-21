@@ -10,8 +10,9 @@ import { cn } from "@/shared/lib/utils/cn";
 import type { Swiper } from "swiper/types";
 import type { Dispatch, SetStateAction } from "react";
 
-type StatsNextBtnProps = {
+export type StatsNextBtnProps = {
   onLastSlide?: boolean;
+  currentSlideIndex: ReturnType<typeof useSwiper>["activeIndex"];
   setIsLastSlide: Dispatch<SetStateAction<boolean>>;
   swiper: Swiper;
 };
@@ -24,13 +25,15 @@ export const NextBtn: FC<StatsNextBtnProps> = (props) => {
 
   const handleNextSlide = () => {
     if (swiper.activeIndex === swiper.slides.length - 2) {
-      // props.onLastSlide && props.onLastSlide(swiper.activeIndex);
+      // props.currentSlideIndex && props.currentSlideIndex(swiper.activeIndex);
       props.setIsLastSlide(true);
     } else {
       props.setIsLastSlide(false);
     }
     swiper.slideNext();
   };
+
+  console.log(swiper.activeIndex);
 
   return (
     <>

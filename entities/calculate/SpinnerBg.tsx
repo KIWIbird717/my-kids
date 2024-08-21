@@ -1,17 +1,17 @@
-import React from "react";
-import SpinnerSmallCircle from "@/public/spinnersmallcircle.svg";
-import SpinnerBigCircle from "@/public/spinnerbigcircle.svg";
+import BigCirclePng from "@/public/BigCirclePng.png";
+import SmallCirclePng from "@/public/SmallCirclePng.png";
 import SpinnerSvg from "@/public/spinnersvg.svg";
+import Image from "next/image";
 
 export default function SpinnerBg() {
   return (
-    <div className="relative mt-[280px] flex items-center justify-center">
-      <div className="absolute z-[3] backdrop-blur-[2px]">
-        <SpinnerSmallCircle />
-      </div>
-      <div className="absolute backdrop-blur-[2px]">
-        <SpinnerBigCircle />
-      </div>
+    <div className="relative flex w-screen items-center justify-center overflow-hidden">
+      <Image src={BigCirclePng} className="z-[2] mt-[28px] w-screen bg-cover" alt="bigcircle" />
+      <Image
+        src={SmallCirclePng}
+        className="absolute z-[3] bg-cover backdrop-blur-[2px]"
+        alt="smallcircle"
+      />
       <div className="absolute z-[4]">
         <SpinnerSvg />
       </div>

@@ -1,7 +1,6 @@
 "use client";
 
-import { HandleSwipe } from "@/shared/ui/HandleSwipe";
-import React, { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Sheet } from "react-modal-sheet";
 
 type FinalPageModalProps = {

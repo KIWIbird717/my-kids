@@ -7,7 +7,10 @@ import React from "react";
 export default function page() {
   return (
     <main
-      className={cn("min-w-screen relative flex min-h-screen flex-col items-center", "startBg")}
+      className={cn(
+        "min-w-screen relative flex min-h-screen flex-col items-center overflow-hidden",
+        "startBg",
+      )}
     >
       <div className="mt-[4rem]">
         <MoonLogo />

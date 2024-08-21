@@ -1,10 +1,10 @@
+import BottomImg from "@/public/bottomfigure.png";
 import { PlanBtn } from "@/shared/ui/home/PlanBtn";
 import { ToggleBtn } from "@/shared/ui/home/ToggleBtn";
 import MoonLogo from "@/shared/ui/MoonLogo";
-import Image from "next/image";
-import BottomSvg from "../public/bottomfigurine.svg";
-import homeImg from "../public/finalhomeimg.png";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import homeImg from "../public/finalhomeimg.png";
 
 export default function HomeTitle() {
   const t = useTranslations("entities.HomeTitle");
@@ -27,7 +27,7 @@ export default function HomeTitle() {
         <PlanBtn />
       </div>
       <div className="absolute bottom-0">
-        <BottomSvg />
+        <Image src={BottomImg} alt="btmfigure" className="w-screen bg-cover" />
       </div>
     </div>
   );
