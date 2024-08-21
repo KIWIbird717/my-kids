@@ -3,11 +3,18 @@
 import BottomArrow from "@/public/ArrowToBottom.svg";
 import BackArrow from "@/public/BackArrow.svg";
 import NextArrow from "@/public/NextArrow.svg";
-import { FC } from "react";
+import { ru } from "date-fns/locale/ru";
+import { FC, useState } from "react";
+import DatePicker, { registerLocale } from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+registerLocale("ru", ru);
 
 export default function DateSelection() {
   const daysAmount = 30;
   const days = Array.from({ length: daysAmount }).fill({ id: 0 });
+
+  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date("2024/08"));
 
   return (
     <div className="mt-[36px] flex flex-col overflow-hidden">
@@ -15,12 +22,20 @@ export default function DateSelection() {
         <button className="bg-transparent">
           <BackArrow />
         </button>
-        <div className="ml-[82px] mr-[62px] flex flex-row items-center justify-center gap-[4px] text-[18px] leading-[41px] tracking-[0.37px] text-white">
-          <span className="font-bold">Ноябрь</span>
-          <span className="font-normal">2022</span>
-          <BottomArrow />
+        <div className="relative ml-[95px] mr-[53px] flex flex-row items-center justify-center text-[18px] leading-[41px] tracking-[0.37px] text-white min-[400px]:mr-[60px]">
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            dateFormat="LLLL yyyy"
+            locale={ru}
+            showMonthYearPicker
+            className="flex w-[140px] items-center justify-center bg-transparent capitalize"
+          />
+          <div className="absolute right-0">
+            <BottomArrow />
+          </div>
         </div>
-        <button className="bg-transparent">
+        <button className="shrink-0 bg-transparent">
           <NextArrow />
         </button>
       </div>

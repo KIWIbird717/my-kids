@@ -2,11 +2,9 @@ import BottomImg from "@/public/bottomfigure.png";
 import ChildPhoto from "@/public/childbigphoto.png";
 import swipeShadow from "@/public/swipeshadow.png";
 import { cn } from "@/shared/lib/utils/cn";
-import { StatsNextBtnProps } from "@/shared/ui/home/start-calculation/NextBtn";
 import MoonLogo from "@/shared/ui/MoonLogo";
 import { StatsSwiper } from "@/widgets/StatsSwiper";
 import Image from "next/image";
-import { FC } from "react";
 
 export default function page() {
   return (
