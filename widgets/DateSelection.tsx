@@ -3,6 +3,7 @@
 import BottomArrow from "@/public/ArrowToBottom.svg";
 import BackArrow from "@/public/BackArrow.svg";
 import NextArrow from "@/public/NextArrow.svg";
+import { getDaysInMonth } from "@/shared/lib/utils/getDaysInMonth";
 import { ru } from "date-fns/locale/ru";
 import { FC, useState } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
@@ -11,10 +12,13 @@ import "react-datepicker/dist/react-datepicker.css";
 registerLocale("ru", ru);
 
 export default function DateSelection() {
-  const daysAmount = 30;
-  const days = Array.from({ length: daysAmount }).fill({ id: 0 });
+  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
 
-  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date("2024/08"));
+  const year = selectedDate?.getFullYear() || new Date().getFullYear();
+  const month = selectedDate?.getMonth() || new Date().getMonth();
+
+  const daysAmount = getDaysInMonth(month, year);
+  const days = Array.from({ length: daysAmount }).fill({ id: 0 });
 
   return (
     <div className="mt-[36px] flex flex-col overflow-hidden">
