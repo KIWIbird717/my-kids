@@ -23,7 +23,7 @@ export default function HomeTitle() {
         <ToggleBtn />
       </div>
       <Image src={homeImg} alt="homepageimg" />
-      <div className="mt-[25px] w-[291px]">
+      <div className="z-[99] mt-[25px] w-[291px]">
         <PlanBtn />
       </div>
       <div className="absolute bottom-0">

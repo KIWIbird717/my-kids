@@ -15,10 +15,7 @@ export default function StartText() {
 
   return (
     <div
-      className={cn(
-        "mb-[3.3125rem] flex flex-col items-center gap-14 px-7",
-        device === "Mobile" && "pt-[5rem]",
-      )}
+      className={cn("flex flex-col items-center gap-14 px-7", device === "Mobile" && "pt-[5rem]")}
     >
       <p className="items-center text-center text-[1.5rem] font-bold leading-8 text-white">
         <span className="text-white">{t("span1")}</span>
