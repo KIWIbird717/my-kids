@@ -61,6 +61,15 @@ body {
   );
 }
 
+.tipsGrad {
+  background: linear-gradient(
+    180deg,
+    rgba(24, 20, 56, 0) 0%,
+    rgba(35, 28, 86, 0.87) 71.19%,
+    #28235c 94.96%
+  );
+}
+
 .swipper-wrapper {
   display: flex !important;
   align-items: center !important;

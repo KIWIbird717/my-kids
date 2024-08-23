@@ -1,12 +1,12 @@
 import HeartLogo from "@/entities/HeartLogo";
 import StartText from "@/entities/StartText";
-import { cn } from "@/shared/lib/utils/cn";
+import { Section } from "@/shared/ui/Section";
 
 export default function Home() {
   return (
-    <main className={cn("min-w-screen flex min-h-screen flex-col items-center", "startBg")}>
+    <Section image="startBg">
       <HeartLogo />
       <StartText />
-    </main>
+    </Section>
   );
 }

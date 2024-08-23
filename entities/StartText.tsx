@@ -1,16 +1,38 @@
-import StartBtn from "@/shared/ui/StartBtn";
-import { useTranslations } from "next-intl";
+"use client";
+
+import { useDevice } from "@/shared/lib/hooks/useDevice";
+import { cn } from "@/shared/lib/utils/cn";
+import { Button } from "@/shared/ui/Button";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 export default function StartText() {
+  const locale = useLocale();
+  const router = useRouter();
+  const device = useDevice();
   const t = useTranslations("entities.StartText");
+  const btn = useTranslations("UI.StartBtn");
+
   return (
-    <div className="mb-[3.3125rem] mt-[7rem] flex max-w-[18.25rem] flex-col items-center gap-14">
-      <p className="items-center text-start text-[1.5rem] font-bold leading-8 text-white">
+    <div
+      className={cn(
+        "mb-[3.3125rem] flex flex-col items-center gap-14 px-7",
+        device === "Mobile" && "pt-[5rem]",
+      )}
+    >
+      <p className="items-center text-center text-[1.5rem] font-bold leading-8 text-white">
         <span className="text-white">{t("span1")}</span>
         <span className="font-normal text-white">{t("span2")}</span>
         <span className="text-white">{t("span3")}</span>
       </p>
-      <StartBtn />
+      <Button
+        variant="primary"
+        onClick={() => {
+          router.push(`/${locale}/intro`);
+        }}
+      >
+        {btn("text")}
+      </Button>
     </div>
   );
 }
