@@ -3,7 +3,7 @@
 import BottomArrow from "@/public/ArrowToBottom.svg";
 import BackArrow from "@/public/BackArrow.svg";
 import NextArrow from "@/public/NextArrow.svg";
-import { getDaysInMonth } from "@/shared/lib/utils/getDaysInMonth";
+import { getDaysInMonth, getWeekDay } from "@/shared/lib/utils/getDaysInMonth";
 import { ru } from "date-fns/locale/ru";
 import { FC, useState } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
@@ -18,7 +18,10 @@ export default function DateSelection() {
   const month = selectedDate?.getMonth() || new Date().getMonth();
 
   const daysAmount = getDaysInMonth(month, year);
-  const days = Array.from({ length: daysAmount }).fill({ id: 0 });
+  const days = Array.from({ length: daysAmount }).map((_, index) => ({
+    date: index + 1,
+    weekDay: getWeekDay(year, month, index + 1),
+  }));
 
   return (
     <div className="mt-[36px] flex flex-col overflow-hidden">
@@ -46,8 +49,8 @@ export default function DateSelection() {
       <div className="relative mt-[29px] flex max-w-[336px] flex-row overflow-hidden">
         <div className="absolute left-[43%] h-[77px] w-[48px] rounded-[14px] border-[1px] border-solid border-[#5633C3] bg-[#2D2563]"></div>
         <div className="relative flex w-full snap-x flex-row overflow-auto">
-          {days.map((_, index) => (
-            <SelectDateItem key={`select-date-item-${index}`} name="П" date={index + 1} />
+          {days.map((day, index) => (
+            <SelectDateItem key={`select-date-item-${index}`} name={day.weekDay} date={index + 1} />
           ))}
         </div>
       </div>
