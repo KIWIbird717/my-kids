@@ -6,12 +6,12 @@ import InfecTip from "@/shared/ui/tips/InfecTip";
 import SmokeTip from "@/shared/ui/tips/SmokeTip";
 import ToothTip from "@/shared/ui/tips/ToothTip";
 import WeightTip from "@/shared/ui/tips/WeightTip";
-import React from "react";
 
 export default function Tips() {
   return (
-    <div className="relative mt-[1.8125rem] w-screen">
-      <div className="absolute ml-[12rem] mt-[1.625rem] min-[425px]:ml-[13rem]">
+    // TODO: Поменять на top, left для чего absolute ?
+    <div className="relative mt-[1.8125rem]">
+      <div className="absolute left-[12rem] top-[1.625rem]">
         <DietTip />
       </div>
       <div className="absolute ml-[6.125rem] mt-[2.625rem] min-[425px]:ml-[7rem]">
