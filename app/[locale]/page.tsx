@@ -8,7 +8,6 @@ export default function Home() {
     <Section image="startBg">
       <HeartLogo />
       <StartText />
-      <DateSelection />
     </Section>
   );
 }

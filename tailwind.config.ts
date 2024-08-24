@@ -42,6 +42,7 @@ const config: Config = {
         fullColorBtn: "linear-gradient(218.06deg, #7041EE -5.89%, #8D41EE 51.01%, #D641EE 101.92%)",
         bgGrad:
           "linear-gradient(168.96deg, #5A12B5 -3.14%, #00000000 31.53%, #00000000 69.66%, #4111FF 107.8%)",
+        btnGradSecond: "linear-gradient(93.46deg, #5563D9 -6.8%, #5736C4 134.86%)",
         circleGrad:
           " linear-gradient(268.5deg, rgba(49, 1, 237, 0.06) -0.06%, rgba(59, 38, 123, 0.06) 97.65%)",
         radGrad:

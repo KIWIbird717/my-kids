@@ -3,7 +3,7 @@
 import FemaleSvg from "@/public/female.svg";
 import MaleSvg from "@/public/male.svg";
 import { cn } from "@/shared/lib/utils/cn";
-import { BackBtn } from "@/shared/ui/home/start-calculation/BackBtn";
+import { StatsPrevBtn } from "@/shared/ui/home/start-calculation/StatsPrevBtn";
 import { NextBtn } from "@/shared/ui/home/start-calculation/NextBtn";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -206,7 +206,7 @@ export const StatsSwiper = () => {
         </div>
       </SwiperSlide>
       <div className="z-[998] mb-[20px] mt-[31px] flex gap-[9px] px-[25px]">
-        <BackBtn onLastSlide={isLastSlide} setIsLastSlide={setIsLastSlide} />
+        <StatsPrevBtn onLastSlide={isLastSlide} setIsLastSlide={setIsLastSlide} />
         <NextBtn swiper={swiper} onLastSlide={isLastSlide} setIsLastSlide={setIsLastSlide} />
       </div>
     </Swiper>

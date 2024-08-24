@@ -1,11 +1,10 @@
 import Carousel from "@/entities/Carousel";
-import CarouselPlan from "@/entities/Plan";
-import { cn } from "@/shared/lib/utils/cn";
+import { Section } from "@/shared/ui/Section";
 
 export default function page() {
   return (
-    <main className={cn("min-w-screen flex min-h-screen flex-col items-center", "startBg")}>
+    <Section image="startBg">
       <Carousel />
-    </main>
+    </Section>
   );
 }

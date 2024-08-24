@@ -1,9 +1,10 @@
 "use client";
 
-import BackBtn from "@/shared/ui/BackBtn";
+import { BackBtn } from "@/shared/ui/BackBtn";
 import { Button } from "@/shared/ui/Button";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
+import BackArrow from "@/public/BackArrow.svg";
 
 export default function BeginKidText() {
   const locale = useLocale();
@@ -19,7 +20,13 @@ export default function BeginKidText() {
         </p>
       </div>
       <div className="flex w-full items-center gap-2">
-        <BackBtn />
+        <BackBtn
+          onClick={() => {
+            router.back();
+          }}
+        >
+          <BackArrow />
+        </BackBtn>
 
         <Button
           variant="primary"

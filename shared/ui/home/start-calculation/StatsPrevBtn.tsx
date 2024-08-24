@@ -8,7 +8,7 @@ type StatsPrevBtnProps = {
   setIsLastSlide: Dispatch<SetStateAction<boolean>>;
 };
 
-export const BackBtn: FC<StatsPrevBtnProps> = (props) => {
+export const StatsPrevBtn: FC<StatsPrevBtnProps> = (props) => {
   const swiper = useSwiper();
 
   const handlePrevSlide = () => {

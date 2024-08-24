@@ -1,10 +1,11 @@
 import HomeTitle from "@/entities/HomeTitle";
 import { cn } from "@/shared/lib/utils/cn";
+import { Section } from "@/shared/ui/Section";
 
 export default function page() {
   return (
-    <main className={cn("min-w-screen flex min-h-screen flex-col items-center", "startBg")}>
+    <Section image="startBg">
       <HomeTitle />
-    </main>
+    </Section>
   );
 }

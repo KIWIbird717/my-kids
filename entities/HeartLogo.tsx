@@ -4,11 +4,11 @@ import SmallHeartLogo from "../public/heartsmalllogo.png";
 
 export default function HeartLogo() {
   return (
-    <div className="relative mr-[3.95rem]">
+    <div className="absolute left-0">
       <Image
         src={SmallHeartLogo}
         alt="smallheartlogo"
-        className="absolute ml-[5rem] mt-[13.8125rem]"
+        className="absolute left-[5rem] top-[13.8125rem]"
       />
       <BgHeart />
     </div>

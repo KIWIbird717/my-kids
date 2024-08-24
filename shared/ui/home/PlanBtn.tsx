@@ -1,19 +1,16 @@
-import { cn } from "@/shared/lib/utils/cn";
+"use client";
+
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { Button } from "../Button";
 
 export const PlanBtn = () => {
   const locale = useLocale();
   const t = useTranslations("UI.Home");
+  const router = useRouter();
   return (
-    <Link
-      href={`/${locale}/home/start-calculation`}
-      className={cn(
-        "flex w-full items-center justify-center rounded-[1.25rem] bg-btn px-[3rem] py-[0.9375rem] text-[1.15rem] font-normal leading-[1.625rem] text-white",
-        "btnGrad",
-      )}
-    >
+    <Button onClick={() => router.push(`/${locale}/home/start-calculation`)} variant="third">
       {t("PlanBtn")}
-    </Link>
+    </Button>
   );
 };
