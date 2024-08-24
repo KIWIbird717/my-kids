@@ -70,6 +70,35 @@ body {
   );
 }
 
+.homeImageGrad {
+  position: relative;
+  padding: 30px;
+  border-radius: 194px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 194px;
+    background: linear-gradient(
+      268.5deg,
+      rgba(45, 36, 81, 0.8) -0.06%,
+      rgba(59, 38, 123, 0.8) 97.65%
+    );
+    opacity: 0.5;
+    z-index: 1;
+    filter: blur(8px);
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
 #statsSwipper {
   .swiper-pagination {
     top: 0 !important;
