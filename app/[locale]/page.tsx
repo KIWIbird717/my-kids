@@ -5,7 +5,7 @@ import DateSelection from "@/widgets/DateSelection";
 
 export default function Home() {
   return (
-    <Section image="startBg">
+    <Section className="relative pb-[15px]">
       <HeartLogo />
       <StartText />
     </Section>

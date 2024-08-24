@@ -16,7 +16,7 @@ export default function StartText() {
   return (
     <div
       className={cn(
-        "flex h-screen flex-col items-center justify-end gap-14 px-7",
+        "flex h-full flex-col items-center justify-end gap-14 px-7",
         device === "Mobile" && "pt-[5rem]",
       )}
     >

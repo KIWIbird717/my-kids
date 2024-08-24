@@ -36,6 +36,7 @@ input[type="number"] {
 body {
   background-image: url("../bgimage.jpg");
   background-size: cover;
+  @apply fixed left-0 top-0 z-[-10];
 }
 
 .introBg {

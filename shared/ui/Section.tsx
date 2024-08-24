@@ -3,7 +3,7 @@ import { cn } from "../lib/utils/cn";
 
 interface SectionProps {
   children: ReactNode;
-  image: string;
+  image?: string;
   className?: string;
 }
 
@@ -11,7 +11,9 @@ interface SectionComponent extends FC<SectionProps> {}
 
 export const Section: SectionComponent = ({ children, image, className }) => {
   return (
-    <main className={cn("min-w-screen flex min-h-screen flex-col items-center", image, className)}>
+    <main
+      className={cn("relative flex h-[calc(100svh+1px)] flex-col items-center", image, className)}
+    >
       {children}
     </main>
   );

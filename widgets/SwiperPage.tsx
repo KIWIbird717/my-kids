@@ -41,23 +41,39 @@ export default function SwiperPage() {
       className="relative flex h-full w-screen justify-center"
       id="introSwiper"
     >
-      <SwiperSlide className="absolute top-[166px] flex items-center justify-center pl-[23px]">
-        <Image src={pregn1} alt="pregphoto1" className="h-[240px] w-[240px]" />
-        <p className="absolute top-[300px] text-[26px] leading-8 text-white">
-          Контролировать прибавку в весе
-        </p>
+      <SwiperSlide className="relative flex items-end justify-end px-[23px] pb-[200px]">
+        <Image
+          src={pregn1}
+          alt="pregphoto1"
+          className="absolute top-[164px] z-[-1] h-[240px] w-[240px]"
+        />
+        <div className="flex h-full w-full items-end">
+          <p className="h-fit text-[26px] leading-8 text-white">Контролировать прибавку в весе</p>
+        </div>
       </SwiperSlide>
-      <SwiperSlide className="absolute top-[166px] flex items-center justify-center pl-[23px]">
-        <Image src={pregn2} alt="pregphoto2" className="h-[240px] w-[240px]" />
-        <p className="absolute top-[290px] text-[26px] leading-8 text-white">
-          Следовать советам вашего врача по питанию и образу жизни
-        </p>
+      <SwiperSlide className="relative flex items-end justify-end px-[23px] pb-[200px]">
+        <Image
+          src={pregn2}
+          alt="pregphoto2"
+          className="absolute top-[164px] z-[-1] h-[240px] w-[240px]"
+        />
+        <div className="flex h-full w-full items-end">
+          <p className="h-fit text-[26px] leading-8 text-white">
+            Следовать советам вашего врача по питанию и образу жизни
+          </p>
+        </div>
       </SwiperSlide>
-      <SwiperSlide className="absolute top-[166px] flex items-center justify-center pl-[23px]">
-        <Image src={pregn3} alt="pregphoto3" className="h-[240px] w-[240px]" />
-        <p className="absolute top-[300px] text-[26px] leading-8 text-white">
-          Готовится к родам с чеклистами на каждый триместр
-        </p>
+      <SwiperSlide className="relative flex items-end justify-end px-[23px] pb-[200px]">
+        <Image
+          src={pregn3}
+          alt="pregphoto3"
+          className="absolute top-[164px] z-[-1] h-[240px] w-[240px]"
+        />
+        <div className="flex h-full w-full items-end">
+          <p className="h-fit text-[26px] leading-8 text-white">
+            Готовится к родам с чеклистами на каждый триместр
+          </p>
+        </div>
       </SwiperSlide>
       <div className="absolute bottom-0 z-[999] flex w-full items-center gap-2 px-[23px] pb-[20px]">
         <BackBtn onClick={() => router.back()}>

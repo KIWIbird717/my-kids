@@ -11,10 +11,10 @@ export default function TipsContent() {
   const t = useTranslations("entities.TipsContent");
   const router = useRouter();
   return (
-    <div className="relative flex h-full flex-col justify-between pt-[40px]">
+    <div className="relative flex h-full flex-col justify-between px-7 pb-4 pt-[40px]">
       <span className="px-[24px] text-[1rem] leading-[1.625rem] text-white">{t("span")}</span>
       <Tips />
-      <div className="flex w-full items-center justify-center gap-2 px-[30px] pb-4">
+      <div className="flex w-full items-center justify-center gap-2">
         <BackBtn
           onClick={() => {
             router.back();

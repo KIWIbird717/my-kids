@@ -12,7 +12,7 @@ export default function BeginKidText() {
   const t = useTranslations("entities.IntroText");
   const btn = useTranslations("UI.Intro");
   return (
-    <div className="flex h-screen w-full flex-col justify-end gap-12 px-7 py-[0.9375rem] text-center">
+    <div className="flex h-screen w-full flex-col justify-end gap-12 px-7 py-4 text-center">
       <div className="flex flex-col items-center gap-2">
         <h3 className="text-[2rem] font-bold leading-10 text-white">{t("title")}</h3>
         <p className="items-center text-center text-[1rem] font-bold leading-[1.625rem] text-white">
